@@ -54,8 +54,9 @@ src/
 ├─ types/ # Shared TypeScript types
 └─ main.tsx # Entry point
 
-📸 Demo
-
+## 🚀 Demo
+Check out the live app here:  
+[Online Shop on Vercel](https://online-shop-eight-omega.vercel.app)
 
 📜 License
 MIT License © 2025 [Rasoul Nasseri]
