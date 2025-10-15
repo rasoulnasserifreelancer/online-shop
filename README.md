@@ -1,69 +1,61 @@
-# React + TypeScript + Vite
+🛒 Online Shop (React + Vite + TypeScript)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern online shop built with React and Vite for blazing-fast development, styled with Tailwind CSS. It uses Redux for robust cart state management, persists the cart in localStorage, and handles navigation with React Router. Written in TypeScript for type safety and maintainability.
 
-Currently, two official plugins are available:
+✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚡ Vite + React for fast bundling and HMR
+- 🎨 Tailwind CSS for responsive, utility-first styling
+- 🛍️ Redux for cart state management
+- 💾 localStorage persistence for user cart
+- 🔀 React Router for smooth navigation
+- 🔒 TypeScript for type safety and scalability
 
-## Expanding the ESLint configuration
+  ## 🌐 Data Source
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+  This project uses the [Platzi Fake Store API](https://fakeapi.platzi.com/) as a mock backend for products and cart data.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+🛠️ Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- React 19
+- Vite
+- TypeScript
+- Tailwind CSS
+- Redux Toolkit
+- React Router v7
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🚀 Getting Started
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Prerequisites
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Node.js (>= 16)
+- npm or yarn
+  Installation
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# Clone the repo
+
+git clone https://github.com/rasoulnasserifreelancer/online-shop.git
+
+# Install dependencies
+
+npm install
+
+# Start development server
+
+npm run dev
+
+📂 Project Structure
+src/
+├─ components/ # Reusable UI components
+├─ pages/ # Page-level components
+├─ routes/ # App routing using React Router
+├─ services/ # Connecting to fake API
+├─ redux/ # Redux slices (e.g., cart)
+├─ types/ # Shared TypeScript types
+└─ main.tsx # Entry point
+
+📸 Demo
+
+
+📜 License
+MIT License © 2025 [Rasoul Nasseri]
