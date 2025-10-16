@@ -3,11 +3,15 @@ import { type Category, type Product } from "../types/types";
 import { useEffect, useState } from "react";
 import ProductItem from "../components/productItem";
 import Loading from "../components/loading";
+import PaginationControlled from "../components/Pagination";
+
 export default function Products() {
   const [products, setProducts] = useState<Product[]>();
   const [selectedCat, setSelectedCat] = useState<Category>();
   const [allCats, setAllCats] = useState<Category[]>();
   const [searchTerm, setSearchTerm] = useState<string>("");
+  const [page, setPage] = useState(1);
+  
 
   useEffect(() => {
     getAllProducts("https://api.escuelajs.co/api/v1/products").then(
@@ -32,6 +36,9 @@ export default function Products() {
       }
     });
 
+  console.log(filtredProducts.length)
+
+  
   return (
     <>
       <div className="flex flex-col justify-between items-center mx-1.5 my-5.5 gap-3.5">
@@ -65,10 +72,13 @@ export default function Products() {
         </ul>
         </div>
         <ul className="grid md:grid-cols-2 gap-6 justify-center">
-          {filtredProducts.map((product) => (
+          {filtredProducts.slice((page-1)*6, page*6).map((product) => (
             <ProductItem key={product.id} {...product} />
           ))}
         </ul>
+        <div>
+          <PaginationControlled page={page} setPage={setPage} count={Math.ceil(filtredProducts.length/6)}/>
+        </div>
       </div>
     </>
   );
