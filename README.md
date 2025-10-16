@@ -43,7 +43,14 @@ npm run dev
 
 
 📂 Project Structure
-<pre>```textsrc/├─ components/   # Reusable UI components├─ pages/        # Page-level components├─ routes/       # App routing using React Router├─ services/     # Connecting to fake API├─ redux/        # Redux slices (e.g., cart)├─ types/        # Shared TypeScript types└─ main.tsx      # Entry point```</pre>
+
+        ├─components/    # Reusable UI components
+        ├─ pages/        # Page-level components
+        ├─ routes/       # App routing using React Router  
+        ├─ services/     # Connecting to fake API  
+        ├─ redux/        # Redux slices (e.g., cart)
+        ├─ types/        # Shared TypeScript types  
+        └─ main.tsx      # Entry point
 
 
 ## 🚀 Demo
