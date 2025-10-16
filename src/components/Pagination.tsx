@@ -6,6 +6,7 @@ import Stack from '@mui/material/Stack';
 export default function PaginationControlled({count, page, setPage}:{count:number, page:number, setPage:(page:number)=>void}) {
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
     setPage(value);
+    console.log(event)
   };
 
   return (
